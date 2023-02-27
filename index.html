@@ -65,36 +65,28 @@
     </script>
 
     <script>
-         class retangulo{
-            constructor(largura,altura){
-                retangulob.largura = largura
-                retangulob.altura = altura
+        let retangulo = {
+            largura: 3.0,
+            altura: 4.0,
+
+            area: function(){
+                let a = this.largura*this.altura
+                console.log('Área: '+a)
+            },
+            perimetro: function(){
+                let p = 2*(this.largura+this.altura)
+                console.log('Perímetro: ' + p)
+            },
+            diagonal: function(){
+                let d = Math.sqrt(this.largura*this.largura + this.altura*this.altura)
+                console.log('Diagonal: ' + d)
             }
-        
-        calcularArea () {
-            return retangulob.largura * retangulob.altura;
-        }
-        calcularPerimetro () {
-            return 2 * (retangulob.largura * retangulob.altura)
+
         }
 
-        calcularDiagonal () {
-            return Math.sqrt(retangulob.largura * retangulob.largura + retangulob.altura * retangulob.altura);
-        }
-
-    }
-        let retangulob = {
-            altura: 3,
-            largura:4,
-        }
-////Calcule
-        let area = retangulo.calcularArea();
-        let perimetro = retangulo.calcularPerimetro();
-        let diagonal = retangulo.calcularDiagonal();
-        
-        console.log('Area: ' + area);
-        console.log('Perimetro: ' + perimetro);
-        console.log('Diagonal: ' +diagonal);
+        retangulo.area()
+        retangulo.perimetro()
+        retangulo.diagonal()
     </script>
 </body>
 </html>
